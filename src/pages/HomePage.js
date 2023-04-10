@@ -1,15 +1,24 @@
-import React, { useEffect, useState } from "react";
-import NavBar from "../common/NavBar";
-import axios from "axios";
-import Posts from "../components/Posts";
-function HomePage() {
-  
+import React, { useState } from "react";
 
+import Header from "../components/header/Header";
+import { NavigationBar } from "../components/navBar/NavigationBar";
+import Posts from "../components/Posts";
+import ErrorPage from "./ErrorPage";
+function HomePage() {
+  const [search, handleSearchInput] = useState();
+  console.log(search);
   return (
     <div>
-      <NavBar />
-      
-      <Posts/>
+      {localStorage.getItem("token") ? (
+        <div>
+          {" "}
+          <NavigationBar handleSearchInput={handleSearchInput} />
+          <Header />
+          <Posts searchString={search} />
+        </div>
+      ) : (
+        <ErrorPage />
+      )}
     </div>
   );
 }
