@@ -64,8 +64,8 @@ const PostDescription = styled(Typography)({
 });
 
 export default function Post(props) {
-  const { image, title, content, tags,  } = props.post;
-  const {firstName,lastName} = props.userInfo
+  const { image, title, content, tags,author  } = props.post;
+  
   const navigate = useNavigate();
   console.log("userInfo", props.userInfo);
   const MAX_LENGTH = 100;
@@ -100,7 +100,7 @@ export default function Post(props) {
           </PostCategory>
         </div>
         <PostTitle variant="h5">{title}</PostTitle>
-        <p>Author: {firstName}</p>
+        <p>Author: {author}</p>
         <hr />
       </PostInfo>
       <PostDescription variant="body1">{shortenText(content)}</PostDescription>

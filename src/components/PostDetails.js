@@ -226,7 +226,7 @@ export default function PostDetails() {
               </SinglePostInfo>
               <SinglePostInfo>
                 <span>
-                  Author: {userInfo.firstName} {userInfo.lastName}
+                  Author: {post.author}
                 </span>
               </SinglePostInfo>
               <SinglePostDesc>{post.content}</SinglePostDesc>

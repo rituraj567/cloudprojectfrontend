@@ -21,7 +21,7 @@ AWS.config.update({
   accessKeyId: "ASIAZSP7P3J2S223FFGJ",
   secretAccessKey: "RSeNEGapoxXnFrE424cBRbrbtr+lqF+JjL54hmhF",
   sessionToken:
-    "FwoGZXIvYXdzEMD//////////wEaDL43WmV/Z1HzeFTZ2iLAAVcNSkkdQAVxCxbfbYKO8Dc8Uz6eCH6nyg7Gn58Uc7fVijXbQljhunCp2V8Pnmt/IbEOAA0RblUdJ5jU0ccgYzQHruTWO4PY1TENM6cV+B/ReAFT+IgJPBR3UI04v/8njRehOOR8a0XSz5gvNZ079ovYKEnCsNp2P1ZyPom+OwtYbnIHV2uhXxjV2ibjM6AiL9CBboM/2Rnvsexsq6PItkchm76gEnUf6+mo6iVmebTqALGb98zDy1LrgnbJ2/Db2ij6otKhBjIt5BvpGE0oLiTHWJD3TKwIiSGNSwo3mNrLh5jnhLlz1S7pg0hiqAMgTgh4Uqaq",
+    "",
 });
 const StyledLink = styled(Link)({
   color: "#3498db",

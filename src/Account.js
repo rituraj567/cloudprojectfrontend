@@ -37,7 +37,7 @@ export default function Account(props) {
       user.authenticateUser(authenticationDetails, {
         onSuccess: (result) => {
           const token = result?.idToken?.jwtToken;
-          localStorage.setItem("token",token)
+          localStorage.setItem("token", token);
           navigate("/");
           resolve(result);
         },
@@ -58,12 +58,21 @@ export default function Account(props) {
     const user = UserPool.getCurrentUser();
     if (user) {
       user.signOut();
+      localStorage.clear();
       navigate("/login");
     }
   };
 
   return (
-    <AccountContext.Provider value={{ authenticate, getSession, logout,errorMessage,setErrorMessage }}>
+    <AccountContext.Provider
+      value={{
+        authenticate,
+        getSession,
+        logout,
+        errorMessage,
+        setErrorMessage,
+      }}
+    >
       {props.children}
     </AccountContext.Provider>
   );
