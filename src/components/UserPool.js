@@ -1,8 +1,8 @@
 import { CognitoUserPool } from "amazon-cognito-identity-js";
 
 const poolData = {
-  UserPoolId: "us-east-1_7wZXFq8CX",
-  ClientId: "7cu8kdpragd3cnuaubsjr2kdk7",
+  UserPoolId: "us-east-1_BvTJeu7gI",
+  ClientId: "7afm8jrjvivcqr5esq2l22hb3g",
   AutoVerifiedAttributes: ["email"],
 };
 
