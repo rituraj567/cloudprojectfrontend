@@ -11,7 +11,7 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import TextField from "@mui/material/TextField";
 import { styled } from "@mui/system";
 import { CognitoUserAttribute } from "amazon-cognito-identity-js";
-import AWS, { CognitoIdentityServiceProvider } from "aws-sdk";
+import AWS from "aws-sdk";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Account from "../../Account";
@@ -20,8 +20,7 @@ AWS.config.update({
   region: "us-east-1",
   accessKeyId: "ASIAZSP7P3J2S223FFGJ",
   secretAccessKey: "RSeNEGapoxXnFrE424cBRbrbtr+lqF+JjL54hmhF",
-  sessionToken:
-    "",
+  sessionToken: "",
 });
 const StyledLink = styled(Link)({
   color: "#3498db",
@@ -79,16 +78,6 @@ export default function Register() {
           return;
         }
         console.log("result", result);
-
-        const cognitoIdentityServiceProvider =
-          new CognitoIdentityServiceProvider();
-        const params = {
-          UserPoolId: UserPool.getUserPoolId(),
-          Username: result.user.getUsername(),
-        };
-        await cognitoIdentityServiceProvider
-          .adminConfirmSignUp(params)
-          .promise();
 
         setSuccessMessage(
           "Successfully registered, please login with your credentials"
